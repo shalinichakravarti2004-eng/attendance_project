@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faculty Dashboard</title>
+
+    <style>
+        body { font-family: Arial; background:#f4f6f9; margin:0; }
+        .header { background:#6a5acd; color:white; padding:15px; text-align:center; position:relative; }
+        .logout { position:absolute; right:20px; top:15px; background:red; color:white; padding:6px 12px; border-radius:5px; cursor:pointer;}
+        .container { padding:20px; }
+        .card { background:white; padding:15px; border-radius:10px; margin-bottom:20px; box-shadow:0px 2px 8px rgba(0,0,0,0.1); }
+        table { width:100%; border-collapse: collapse; }
+        th, td { padding:10px; border-bottom:1px solid #ddd; text-align:center; }
+        th { background:#6a5acd; color:white; }
+        input { padding:8px; width:250px; margin-bottom:10px; }
+        .btn { padding:5px 10px; background:#6a5acd; color:white; border:none; border-radius:5px; cursor:pointer; }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h2>Faculty Dashboard</h2>
+    <p id="deptText"></p>
+    <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Search Student</h3>
+        <input type="text" placeholder="Search..." onkeyup="searchName(this.value)">
+    </div>
+
+    <div class="card">
+        <h3>Student List</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Enrollment</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Attendance %</th>
+                    <th>Today</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTable"></tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/faculty.js"></script>
+
+</body>
+</html>

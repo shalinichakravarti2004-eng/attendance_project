@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Attendance</title>
+<style>
+body{
+    font-family: Arial;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+h2{
+    margin-top:20px;
+}
+
+.calendar{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap:5px;
+}
+
+.day{
+    background:white;
+    padding:10px;
+    min-height:100px;
+    border-radius:8px;
+    position:relative;
+}
+
+.date{
+    font-weight:bold;
+}
+
+.checkin{
+    background:#00e676;
+    color:white;
+    font-size:12px;
+    margin-top:5px;
+    border-radius:5px;
+}
+
+.checkout{
+    background:#d500f9;
+    color:white;
+    font-size:12px;
+    margin-top:3px;
+    border-radius:5px;
+}
+
+.month-block{
+    margin-bottom:40px;
+}
+
+.month-title{
+    font-size:20px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.weekdays{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>My Attendance</h2>
+
+<div style="font-size:18px; font-weight:bold; margin:10px;">
+    <div id="percentageBox">Attendance: --</div>
+
+    <select id="monthDropdown"></select>
+</div>
+
+<br>
+
+<div id="monthContainer"></div>
+
+<div class="calendar" id="calendar"></div>
+
+<script src="js/my-attendance.js"></script>
+
+</body>
+</html>

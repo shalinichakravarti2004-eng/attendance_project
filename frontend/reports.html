@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Report</title>
+</head>
+
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div id="reportBox" style="
+    background:white;
+    width:300px;
+    margin:20px auto;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+">
+    <h3> Monthly Report</h3>
+    <p>Loading...</p>
+</div>
+
+<h2>Monthly Report (Bar)</h2>
+<canvas id="barChart" height="100"></canvas>
+
+<h2>Monthly Report (Pie)</h2>
+<canvas id="pieChart" height="100"></canvas>
+
+<h2>Trend</h2>
+<canvas id="trendChart" height="100"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<button onclick="downloadPDF()">Download PDF</button>
+
+<script src="js/report.js"></script>
+
+</body>
+</html>
